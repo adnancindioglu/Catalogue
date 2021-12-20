@@ -27,7 +27,11 @@ export class CatalogueService {
   }
 
   getFavoriteByProductAll(): Observable<ProductModel[]> {
-    return this.http.get<ProductModel[]>(`${baseUrl}/favorite`);
+    return this.http.get<ProductModel[]>(`${baseUrl}/favorites`);
+  }
+
+  updateFavorite(Id:any): Observable<any> {
+    return this.http.post(`${baseUrl}/favorites`, {productId:Id});
   }
 
   getProductDetail(id: any): Observable<ProductModel> {

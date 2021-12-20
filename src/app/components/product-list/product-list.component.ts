@@ -19,7 +19,6 @@ export class ProductListComponent implements OnInit {
       // PARAMS CHANGED ..    
 
       let id = params['id'];    
-      console.log(id);
       this.productList(id);
       
   });
@@ -32,9 +31,18 @@ export class ProductListComponent implements OnInit {
         data => {
           if(data){
             this.productModel = data;
-            
           }
-          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  favorite(value:any,productId:any){
+    this.catalogueService.updateFavorite(productId)
+      .subscribe(
+        data => {
+          
         },
         error => {
           console.log(error);

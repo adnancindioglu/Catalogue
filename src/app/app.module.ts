@@ -11,6 +11,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductFavoriteListComponent } from './components/product-favorite-list/product-favorite-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { FavoriteButtonComponent } from './components/favorite-button/favorite-button.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     ProductDetailComponent,
     ProductListComponent,
     ProductFavoriteListComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    FavoriteButtonComponent
   ],
   imports: [
     BrowserModule,

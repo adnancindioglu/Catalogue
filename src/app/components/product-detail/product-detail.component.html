@@ -1,11 +1,10 @@
 <div class="card">
-    <img class="card-img-top" src="http://localhost:3000/{{productModel.productImage}}" alt="Card image cap">
+    <app-favorite-button (selectedChange)="favorite($event,productModel.id)" [selected]="productModel.isFavorite ? productModel.isFavorite : false"></app-favorite-button>
+    <img *ngIf="productModel.productImage" class="card-img-top" src="http://localhost:3000/{{productModel.productImage}}" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title">{{productModel.name}}</h5>
-        <h5 class="card-title">{{productModel.name}}</h5>
         <p class="card-text">{{productModel.description}}</p>
-        <p class="card-text">{{productModel.isFavorite}}</p>
-        <p class="card-text">{{productModel.price}}</p>
+        <p class="card-text">{{productModel.price | currency:'USD'}}</p>
         <a href="#" class="btn btn-primary">Add Favorite</a>
     </div>
 </div>

@@ -1,17 +1,11 @@
 <div class="container-fluid dashboard-slider mt-3">
 <ngb-carousel *ngIf="sliderModel.length > 0">
-  <span>asdasd</span>
-  <div *ngFor="let item of sliderModel">
-    <span>{{item.productId}}</span>
-    <ng-template ngbSlide>
-      <div class="wrapper">
-        <img [src]="images[0]" alt="Random first slide">
-      </div>
-      <div class="carousel-caption">
-        <h3>First Slide</h3>
-        <p> Angular 10 Carousel Example </p>
-      </div>
+    <ng-template *ngFor="let item of sliderModel" ngbSlide>
+      <a routerLink="/product-detail/{{item.productId}}" rel="nofollow noopener noreferrer">
+        <div class="picsum-img-wrapper">
+          <img src="http://localhost:3000/{{item.image}}" alt="Random first slide">
+        </div>
+      </a>
     </ng-template>
-  </div>
 </ngb-carousel>
 </div>

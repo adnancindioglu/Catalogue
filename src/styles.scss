@@ -2,3 +2,23 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.carousel-inner{
+    max-height: 300px;
+    min-height: 300px;
+}
+
+.carousel-inner img{
+    height: 300px;
+}
+.card-heading{
+    position:absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.card-heading svg{
+    height: 35px;
+    width: 35px;
+
+}

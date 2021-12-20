@@ -10,20 +10,18 @@ import { CatalogueService } from 'src/app/services/catalogue.service';
 })
 export class ProductSliderComponent {
 
-  images = [700, 800, 807].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
   constructor(config: NgbCarouselConfig,private catalogueService: CatalogueService) {
     // customize default values of carousels used by this component tree
     config.interval = 2000;
     config.keyboard = true;
     config.pauseOnHover = true;
+    config.pauseOnFocus = true;
+    config.pauseOnHover = true;
   }
 
   sliderModel:SliderModel[] = [];
 
-  ngOnInit(): void {
-    console.log(this.images);
-    
+  ngOnInit(): void {    
     this.sliderList();
   }
 
@@ -33,10 +31,7 @@ export class ProductSliderComponent {
         data => {
           if(data){
             this.sliderModel = data;
-            console.log(this.sliderModel);
-            
           }
-          console.log(data);
         },
         error => {
           console.log(error);

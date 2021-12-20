@@ -31,7 +31,17 @@ export class ProductDetailComponent implements OnInit {
             this.productModel = data;
             
           }
-          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  favorite(value:any,productId:any){
+    this.catalogueService.updateFavorite(productId)
+      .subscribe(
+        data => {
+          
         },
         error => {
           console.log(error);

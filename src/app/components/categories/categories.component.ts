@@ -25,7 +25,6 @@ export class CategoriesComponent implements OnInit {
             this.categoryModel = data;
             
           }
-          console.log(data);
         },
         error => {
           console.log(error);
