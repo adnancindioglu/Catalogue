@@ -31,3 +31,28 @@ body{
         max-width: 1400px;
     }
 }
+
+.img-wrap{
+    text-align: center;
+    height: 400px;
+}
+
+.img-wrap img {
+    height: 100%;
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.card-text-money{
+    float: right;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card-title-name{
+    height: 60px;
+    padding: 0px 15px 0px 15px;
+}
