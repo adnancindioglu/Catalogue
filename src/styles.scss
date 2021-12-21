@@ -3,6 +3,9 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
+body{
+    background-color: #f8f9fa;
+}
 .carousel-inner{
     max-height: 300px;
     min-height: 300px;
@@ -21,4 +24,10 @@
     height: 35px;
     width: 35px;
 
+}
+
+@media (min-width: 1200px){
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1400px;
+    }
 }

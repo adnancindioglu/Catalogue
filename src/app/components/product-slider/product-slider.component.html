@@ -1,11 +1,11 @@
 <div class="container-fluid dashboard-slider mt-3">
-<ngb-carousel *ngIf="sliderModel.length > 0">
-    <ng-template *ngFor="let item of sliderModel" ngbSlide>
-      <a routerLink="/product-detail/{{item.productId}}" rel="nofollow noopener noreferrer">
-        <div class="picsum-img-wrapper">
-          <img src="http://localhost:3000/{{item.image}}" alt="Random first slide">
-        </div>
-      </a>
-    </ng-template>
-</ngb-carousel>
+  <ngb-carousel *ngIf="sliderModel.length > 0">
+      <ng-template *ngFor="let item of sliderModel" ngbSlide>
+        <a routerLink="/product-detail/{{item.productId}}" rel="nofollow noopener noreferrer">
+          <div class="picsum-img-wrapper">
+            <img src="http://localhost:3000/{{item.image}}" alt="Random first slide">
+          </div>
+        </a>
+      </ng-template>
+  </ngb-carousel>
 </div>

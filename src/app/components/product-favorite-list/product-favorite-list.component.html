@@ -2,10 +2,12 @@
   <div class="col-md-6 col-12" *ngFor="let item of productModel">
     <div class="card mb-2">
       <app-favorite-button (selectedChange)="favorite($event,item.id)" [selected]="item.isFavorite ? item.isFavorite : false"></app-favorite-button>
-      <img class="card-img-top" src="http://localhost:3000/{{item.productImage}}" alt="Card image cap">
+      <div class="img-wrap">
+        <img class="card-img-top" src="http://localhost:3000/{{item.productImage}}" alt="Card image cap">
+      </div>
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
-        <p class="card-text">{{item.description}}</p>
+        <!-- <p class="card-text">{{item.description}}</p> -->
         <p class="card-text">{{item.price | currency:'USD'}}</p>
         <a href="#" class="btn btn-primary" routerLink="/product/{{item.id}}">Detail</a>
       </div>
