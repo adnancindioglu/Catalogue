@@ -13,7 +13,7 @@ export class ProductDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,private router: Router,private catalogueService: CatalogueService) { }
 
   productModel:ProductModel= new ProductModel();
-
+  isSuccess:boolean=false;
   ngOnInit() {
     this.route.params.subscribe(params => {
       let id = params['id'];   
@@ -41,7 +41,10 @@ export class ProductDetailComponent implements OnInit {
     this.catalogueService.updateFavorite(productId)
       .subscribe(
         data => {
-          
+          this.isSuccess = true;
+          setTimeout(()=>{
+            this.isSuccess = false;
+          },1000);
         },
         error => {
           console.log(error);

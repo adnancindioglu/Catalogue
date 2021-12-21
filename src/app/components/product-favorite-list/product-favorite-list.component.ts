@@ -12,6 +12,7 @@ export class ProductFavoriteListComponent implements OnInit {
   constructor(private catalogueService: CatalogueService) { }
 
   productModel:ProductModel[]=[];
+  isSuccess:boolean=false;
 
   ngOnInit() {
     this.favoriteByProductList();
@@ -35,7 +36,11 @@ export class ProductFavoriteListComponent implements OnInit {
     this.catalogueService.updateFavorite(productId)
       .subscribe(
         data => {
-          
+          this.isSuccess = true;
+          this.favoriteByProductList();
+          setTimeout(()=>{
+            this.isSuccess = false;
+          },1000);
         },
         error => {
           console.log(error);
