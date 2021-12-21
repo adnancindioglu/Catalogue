@@ -24,7 +24,6 @@ export class ProductFavoriteListComponent implements OnInit {
         data => {
           if(data){
             this.productModel = data;
-            
           }
         },
         error => {
