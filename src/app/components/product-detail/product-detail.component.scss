@@ -1,0 +1,32 @@
+.container{
+    background-color: white;
+    padding-top: 50px;
+}
+
+.product-detail{
+    padding-bottom: 25px;
+}
+
+.product-detail-title{
+    text-transform: none;
+    border-top: 0;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.product-detail-price{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.product-detail-descriptin{
+    font-size: 20px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    width: 100%;
+}
+
+.product-detail-img{
+    border-right: 1px solid #e5e5e5;
+}
